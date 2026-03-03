@@ -95,15 +95,9 @@ Use cases:
 - sharpening
 
 ### Smoothing Filters
+<img width="679" height="391" alt="image" src="https://github.com/user-attachments/assets/e8f41305-b85e-4c12-bc95-d9c03afe256a" />
+<img width="550" height="259" alt="image" src="https://github.com/user-attachments/assets/510d511b-245e-4c58-a297-418946d4c07b" />
 
-- **Mean filter**: simple blur
-- **Gaussian filter**: better noise suppression
-- **Median filter**: strong for salt-and-pepper noise
-
-```python
-img_blur = cv2.GaussianBlur(img, (5, 5), 0)
-img_med = cv2.medianBlur(img, 5)
-```
 
 ## 7. Segmentation
 
@@ -112,13 +106,7 @@ Typical output: binary image (`0` and `255`).
 
 ### Global Threshold
 
-\[
-g(x,y)=
-\begin{cases}
-1, & f(x,y)\ge T \\
-0, & f(x,y)<T
-\end{cases}
-\]
+<img width="757" height="192" alt="image" src="https://github.com/user-attachments/assets/bb0a048d-a8cb-498a-9c54-d68863f7e295" />
 
 ```python
 _, binary = cv2.threshold(img, 100, 255, cv2.THRESH_BINARY)
@@ -234,9 +222,7 @@ contours, _ = cv2.findContours(
   ```
 - Circularity:
 
-\[
-C = \frac{4\pi A}{P^2}
-\]
+<img width="657" height="172" alt="image" src="https://github.com/user-attachments/assets/04264a3a-633a-4e85-968e-60dd55f418b2" />
 
 If \(C \approx 1\), shape is close to a circle.
 
