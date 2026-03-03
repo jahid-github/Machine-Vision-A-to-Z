@@ -1,4 +1,4 @@
-# Machine Vision Exam Master README
+# Machine Vision Exam Master
 
 This README is a complete, exam-focused summary of core machine vision topics: theory, formulas, matrices, segmentation, color, shape, geometry, calibration, and coding patterns.
 
@@ -360,33 +360,13 @@ def pixel_to_robot(u, v, H):
     return pr[0:2]
 ```
 
-## Final Exam Readiness Checklist
+---
 
-You are exam-ready if you can do all of these from memory:
-
-- Explain the full machine vision pipeline.
-- Compare global, Otsu, and adaptive thresholding.
-- Explain why HSV is often better than RGB.
-- Explain and apply morphology operations.
-- Compute and interpret circularity.
-- Write translation and rotation matrices.
-- Explain homography and minimum point requirement.
-- Write thresholding, HSV segmentation, and homography mapping code.
-
-## Quick Revision Strategy
-
-1. Memorize formulas: contrast transform, circularity, IoU.
-2. Memorize matrices: translation, rotation, homography usage.
-3. Practice writing 3 core code snippets without notes.
-4. Practice one full pipeline question end-to-end.
+# MACHINE VISION – FINAL CONFIDENCE TEST (WITH FULL ANSWERS)
 
 ---
 
-# 🔥 MACHINE VISION – FINAL CONFIDENCE TEST (WITH FULL ANSWERS)
-
----
-
-# 🧠 SECTION 1 – THEORY
+# SECTION 1 – THEORY
 
 ---
 
@@ -517,7 +497,7 @@ Thus, circularity of perfect circle is 1.
 
 ---
 
-# 💻 SECTION 2 – CODING
+# SECTION 2 – CODING
 
 ---
 
@@ -627,7 +607,7 @@ def pixel_to_robot(u, v, H):
 
 ---
 
-# 📐 SECTION 3 – GEOMETRY
+# SECTION 3 – GEOMETRY
 
 ---
 
@@ -696,8 +676,6 @@ Thus, translation becomes linear matrix operation.
 
 ---
 
-# 🚨 BONUS
-
 ## ✅ Q11
 
 **Robot misses object after calibration. Causes:**
@@ -711,27 +689,5 @@ Thus, translation becomes linear matrix operation.
 7. Not enough calibration points
 
 ---
-
-# 🎯 FINAL STATUS
-
-If you can:
-
-* Write these answers
-* Reproduce the formulas
-* Write the code without copying
-* Explain concepts clearly
-
-👉 You are fully prepared.
-
----
-
-If you want ultimate final step:
-
-I can now give:
-
-* 📄 Ultra-compact 1-page A4 exam cheat sheet
-* ⏱ 15-minute speed revision
-* 🎤 Oral defense simulation
-* 💣 Hardest possible surprise question set
 
 Tell me which one.
