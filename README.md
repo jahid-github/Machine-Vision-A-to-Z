@@ -285,9 +285,8 @@ pr /= pr[2]
 
 ## 18. IoU (Intersection over Union)
 
-\[
-\mathrm{IoU} = \frac{\text{Intersection}}{\text{Union}}
-\]
+<img width="690" height="159" alt="image" src="https://github.com/user-attachments/assets/ce31bd98-1496-4494-a24a-4597814f6950" />
+
 
 Used to evaluate segmentation quality against ground truth masks.
 
@@ -408,30 +407,8 @@ Therefore, HSV segmentation is more robust to lighting variation.
 
 **Prove circularity of circle equals 1**
 
-Circularity:
+<img width="727" height="616" alt="image" src="https://github.com/user-attachments/assets/5a0580fb-d6b7-4390-b614-4a3f7201ab83" />
 
-[
-C = \frac{4\pi A}{P^2}
-]
-
-For circle:
-[
-A = \pi r^2
-]
-[
-P = 2\pi r
-]
-
-Substitute:
-
-[
-C = \frac{4\pi(\pi r^2)}{(2\pi r)^2}
-]
-
-[
-= \frac{4\pi^2 r^2}{4\pi^2 r^2}
-= 1
-]
 
 Thus, circularity of perfect circle is 1.
 
@@ -581,37 +558,9 @@ def pixel_to_robot(u, v, H):
 
 ## ✅ Q9
 
-Given:
+<img width="736" height="360" alt="image" src="https://github.com/user-attachments/assets/b97859dc-a423-46aa-b7b3-df84e6f1a4a1" />
 
-[
-R =
-\begin{bmatrix}
-0 & -1 & 0 \
-1 & 0 & 0 \
-0 & 0 & 1
-\end{bmatrix}
-]
-
-Compare with:
-
-[
-R =
-\begin{bmatrix}
-\cos\theta & -\sin\theta \
-\sin\theta & \cos\theta
-\end{bmatrix}
-]
-
-Here:
-
-* cosθ = 0
-* sinθ = 1
-
-Thus:
-
-[
-\theta = 90^\circ
-]
+<img width="597" height="289" alt="image" src="https://github.com/user-attachments/assets/8cdcb7dc-36b3-49ad-8a90-262514e97506" />
 
 Rotation is counter-clockwise 90°.
 
@@ -621,26 +570,7 @@ Rotation is counter-clockwise 90°.
 
 **Why homogeneous coordinates?**
 
-In Cartesian coordinates, translation cannot be represented as matrix multiplication.
-
-Homogeneous coordinates add an extra dimension:
-
-[
-[x, y, 1]
-]
-
-This allows translation to be represented as:
-
-[
-T =
-\begin{bmatrix}
-1 & 0 & t_x \
-0 & 1 & t_y \
-0 & 0 & 1
-\end{bmatrix}
-]
-
-Thus, translation becomes linear matrix operation.
+<img width="997" height="471" alt="image" src="https://github.com/user-attachments/assets/cdc901b9-5f62-472b-a3e4-34c2e90eeef6" />
 
 ---
 
@@ -657,5 +587,3 @@ Thus, translation becomes linear matrix operation.
 7. Not enough calibration points
 
 ---
-
-Tell me which one.
