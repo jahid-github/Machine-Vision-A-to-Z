@@ -248,25 +248,13 @@ Benefit: translation and other transforms can be represented with matrix multipl
 
 ## 14. Translation Matrix
 
-\[
-T =
-\begin{bmatrix}
-1 & 0 & t_x \\
-0 & 1 & t_y \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+<img width="300" height="157" alt="image" src="https://github.com/user-attachments/assets/f04f4691-65bf-4c45-9fac-75da2e1cda81" />
+
 
 ## 15. Rotation Matrix (2D Homogeneous Form)
 
-\[
-R =
-\begin{bmatrix}
-\cos\theta & -\sin\theta & 0 \\
-\sin\theta & \cos\theta & 0 \\
-0 & 0 & 1
-\end{bmatrix}
-\]
+<img width="391" height="169" alt="image" src="https://github.com/user-attachments/assets/b6b617d4-4298-4d03-a5ef-391ccca0e830" />
+
 
 ## 16. Rigid Transformation
 
@@ -277,6 +265,7 @@ A rigid transform combines:
 It preserves distances and angles.
 
 ## 17. Homography (High Priority)
+<img width="295" height="133" alt="image" src="https://github.com/user-attachments/assets/dbc71a1a-2998-48b2-8188-5624dcf5d933" />
 
 - A \(3 \times 3\) projective transform matrix.
 - Maps one plane to another plane.
