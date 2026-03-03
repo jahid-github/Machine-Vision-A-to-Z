@@ -47,14 +47,8 @@ In practice:
 
 ### Brightness and Contrast
 
-\[
-s = \alpha r + \beta
-\]
+<img width="754" height="313" alt="image" src="https://github.com/user-attachments/assets/20d2466b-c98a-4aee-b31c-035c2175aec1" />
 
-- \(\alpha > 1\): higher contrast
-- \(\alpha < 1\): lower contrast
-- \(\beta > 0\): brighter
-- \(\beta < 0\): darker
 
 ```python
 img_new = cv2.convertScaleAbs(img, alpha=1.5, beta=30)
