@@ -56,9 +56,8 @@ img_new = cv2.convertScaleAbs(img, alpha=1.5, beta=30)
 
 ### Linear Contrast Stretching
 
-\[
-s = \frac{r - r_{\min}}{r_{\max} - r_{\min}} \times 255
-\]
+<img width="916" height="220" alt="image" src="https://github.com/user-attachments/assets/613b3103-ac24-44eb-af32-bacc1cee6181" />
+
 
 ```python
 img_new = cv2.normalize(img, None, 0, 255, cv2.NORM_MINMAX)
