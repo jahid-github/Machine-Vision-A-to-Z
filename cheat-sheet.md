@@ -55,7 +55,7 @@ robot_coord = cv2.perspectiveTransform(p, H)
 
 ---
 
-### **Essential Theory "Flashcards" for the Sheet**
+### **Essential Theory Flashcards**
 
 | Topic | Key Concept | Why? |
 | --- | --- | --- |
