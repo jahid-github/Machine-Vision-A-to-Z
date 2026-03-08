@@ -7,10 +7,10 @@ This comprehensive study guide is designed to prepare you for your HAMK Robotics
 Machine vision allows robots to perceive and interact with their environment by converting visual data into actionable information.
 
 * **Image Representation:** Images are stored as 2D/3D matrices.
-* **Grayscale:** A single 2D matrix where pixel values range from 0 (Black) to 255 (White).
-* **Color (BGR):** A 3D matrix (height, width, 3 channels). Note that OpenCV uses **BGR** (Blue, Green, Red) by default, not RGB.
+    * **Grayscale:** A single 2D matrix where pixel values range from 0 (Black) to 255 (White).
+    * **Color (BGR):** A 3D matrix (height, width, 3 channels). Note that OpenCV uses **BGR** (Blue, Green, Red) by default, not RGB.
 * **Coordinate Systems:**
-* **Image Coordinates:** Origin (0,0) is the top-left corner. $u$ moves right, $v$ moves down.
+    * **Image Coordinates:** Origin (0,0) is the top-left corner. $u$ moves right, $v$ moves down.
 * **RoboDK Integration:** Use `RDK.Cam2D_Snapshot(file, cam)` to capture images in simulation and `cv2.imread(file)` to load them for processing.
 ---
 
