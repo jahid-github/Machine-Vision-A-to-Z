@@ -1,4 +1,4 @@
-This comprehensive study guide is designed to prepare you for your HAMK Robotics Machine Vision final exam, covering all five key lecture modules. It includes theoretical foundations, mathematical concepts, and hands-on Python/OpenCV code snippets.
+It includes theoretical foundations, mathematical concepts, and hands-on Python/OpenCV code snippets.
 
 ---
 
@@ -22,40 +22,40 @@ Preprocessing is critical to remove noise and enhance features before analysis.
 * **Histogram Equalization:** A technique to improve image contrast by spreading out the most frequent intensity values.
 * **Spatial Filtering (Convolution):** A "kernel" (small matrix) slides over the image to perform mathematical operations.
 * **Smoothing Filters:**
-* **Mean/Average:** Blurs the image to reduce noise.
-* **Gaussian:** Uses a weighted average; better for "Gaussian" (random) noise.
-* **Median:** Replaces the center pixel with the median of neighbors; excellent for **Salt-and-Pepper noise** (black/white dots).
+   * **Mean/Average:** Blurs the image to reduce noise.
+   * **Gaussian:** Uses a weighted average; better for "Gaussian" (random) noise.
+   * **Median:** Replaces the center pixel with the median of neighbors; excellent for **Salt-and-Pepper noise** (black/white dots).
 ---
 ### **Module 3: Low-Level Vision II – Segmentation & Edges**
 
 Segmentation converts a grayscale image into a binary mask (Black & White) to isolate objects.
 
 * **Thresholding Methods:**
-* **Global:** Uses a fixed value (e.g., all pixels > 127 become 255).
-* **Otsu’s Binarization:** Automatically calculates the optimal threshold by minimizing intra-class variance.
-* **Adaptive Thresholding:** Calculates thresholds for small regions; best for images with uneven lighting.
+   * **Global:** Uses a fixed value (e.g., all pixels > 127 become 255).
+   * **Otsu’s Binarization:** Automatically calculates the optimal threshold by minimizing intra-class variance.
+   * **Adaptive Thresholding:** Calculates thresholds for small regions; best for images with uneven lighting.
 * **Edge Detection:**
-* **Sobel:** Uses gradients to find intensity changes.
-* **Canny:** A multi-stage, robust detector that is the industry standard for clean edges.
+   * **Sobel:** Uses gradients to find intensity changes.
+   * **Canny:** A multi-stage, robust detector that is the industry standard for clean edges.
 * **Morphological Operations:**
-* **Erosion:** Shrinks white regions (removes small noise).
-* **Dilation:** Expands white regions (closes small holes).
-* **Opening:** Erosion followed by Dilation (removes noise while keeping object size).
-* **Closing:** Dilation followed by Erosion (closes holes while keeping object size).
+   * **Erosion:** Shrinks white regions (removes small noise).
+   * **Dilation:** Expands white regions (closes small holes).
+   * **Opening:** Erosion followed by Dilation (removes noise while keeping object size).
+   * **Closing:** Dilation followed by Erosion (closes holes while keeping object size).
 ---
 ### **Module 4: Coordinate Mapping (Calibration)**
 This links "Pixel World" to "Robot World".
 * **Key Concept:** Cameras see in pixels ($u, v$), but robots move in millimeters ($X, Y, Z$).
 * **2D Transformations:**
-* **Translation:** Moving an object ($x+dx, y+dy$).
-* **Rigid (Euclidean):** Rotation + Translation (3 Degrees of Freedom).
-* **Affine:** Rotation + Translation + Scale + Shear (6 Degrees of Freedom).
-* **Homography:** A projective transformation used for planar surfaces. Requires at least **4 pairs of points** to calculate the mapping matrix.
+   * **Translation:** Moving an object ($x+dx, y+dy$).
+   * **Rigid (Euclidean):** Rotation + Translation (3 Degrees of Freedom).
+   * **Affine:** Rotation + Translation + Scale + Shear (6 Degrees of Freedom).
+   * **Homography:** A projective transformation used for planar surfaces. Requires at least **4 pairs of points** to calculate the mapping matrix.
   
 * **Calibration Workflow:**
-1. Collect 4+ points in pixels (from camera) and their corresponding real-world coordinates (from robot).
-2. Use `cv2.findHomography()` to find the transformation matrix.
-3. Use `cv2.perspectiveTransform()` to convert new pixel detections to robot coordinates.
+   1. Collect 4+ points in pixels (from camera) and their corresponding real-world coordinates (from robot).
+   2. Use `cv2.findHomography()` to find the transformation matrix.
+   3. Use `cv2.perspectiveTransform()` to convert new pixel detections to robot coordinates.
 ---
 
 ### **Module 5: Color & Shape Analysis**
@@ -63,15 +63,15 @@ This links "Pixel World" to "Robot World".
 Combining descriptors to uniquely identify objects.
 
 * **HSV Color Space:** Robust against lighting changes.
-* **Hue (H):** The color (0-179 in OpenCV).
-* **Saturation (S):** Vibrancy.
-* **Value (V):** Brightness.
+   * **Hue (H):** The color (0-179 in OpenCV).
+   * **Saturation (S):** Vibrancy.
+   * **Value (V):** Brightness.
 * **Geometric Descriptors:**
-* **Aspect Ratio:** Width / Height.
-* **Circularity:** $4\pi \times (\text{Area} / \text{Perimeter}^2)$. A perfect circle has a circularity of 1.0.
+   * **Aspect Ratio:** Width / Height.
+   * **Circularity:** $4\pi \times (\text{Area} / \text{Perimeter}^2)$. A perfect circle has a circularity of 1.0.
 * **SimpleBlobDetector:** An OpenCV tool that automates detection based on area, circularity, convexity, and inertia.
 ---
-### **Final Exam Quick-Reference Code**
+### **Quick-Reference Code**
 
 ```python
 import cv2
@@ -100,4 +100,4 @@ target_pixel = np.array([[[u, v]]], dtype='float32')
 robot_coord = cv2.perspectiveTransform(target_pixel, H)
 
 ```
-**Pro-Tip for the Exam:** If a question asks why we use HSV instead of BGR, the answer is that **HSV separates color (Hue) from lighting (Value)**, making it much more stable in industrial environments.
+**Pro-Tip:** If a question asks why we use HSV instead of BGR, the answer is that **HSV separates color (Hue) from lighting (Value)**, making it much more stable in industrial environments.
