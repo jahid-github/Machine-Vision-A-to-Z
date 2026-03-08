@@ -72,11 +72,19 @@ robot_coord = cv2.perspectiveTransform(p, H)
 2. **Pixel to Robot**: $P_{robot} = H \times P_{pixel}$.
 3. **Aspect Ratio**: $Width / Height$.
 
-**Exam Tip:** If the code doesn't work, check your **color spaces**. Most errors come from trying to apply `Canny` or `Threshold` on a 3-channel BGR image instead of a 1-channel Grayscale image. Always use `cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)` first!  Cheat Sheet Tip: For your exam, remember that cv2.imshow() is for a quick look at an image, but plt.plot() or plt.hist() is used for analyzing the data behind the pixels to make automated decisions. import matplotlib.pyplot as plt
+**Tip 1:** If the code doesn't work, check your **color spaces**. Most errors come from trying to apply `Canny` or `Threshold` on a 3-channel BGR image instead of a 1-channel Grayscale image. Always use `cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)` first!  
+
+**Tip 2:** Remember that `cv2.imshow()` is for a quick look at an image, but `plt.plot()` or `plt.hist()` is used for analyzing the data behind the pixels to make automated decisions. 
+
+### Plot code
+
+```python
+import matplotlib.pyplot as plt
 # To show a histogram
 plt.hist(gray_img.ravel(), 256, [0, 256])
 plt.show()
-
 # To show an image in a notebook/exam environment
 plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-plt.show() Just remember: Histogram = Contrast/Thresholding Tool and Subplots = Comparison Tool. Focus your space on the OpenCV functions like cv2.findHomography and cv2.Canny, as those are the "action" steps the robot actually needs to move.
+plt.show()
+```
+**Tip 3:** Histogram = Contrast/Thresholding Tool and Subplots = Comparison Tool. Focus your space on the OpenCV functions like `cv2.findHomography` and `cv2.Canny`, as those are the "action" steps the robot actually needs to move.
