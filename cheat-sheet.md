@@ -1,5 +1,5 @@
 
-### **The Machine Vision "Golden" Pipeline**
+### **The Machine Vision Pipeline**
 *Most problems follow this flow: Capture → Preprocess → Segment → Analyze → Map.*
 
 ```python
